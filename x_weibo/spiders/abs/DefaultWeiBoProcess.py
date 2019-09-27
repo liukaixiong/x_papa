@@ -2,6 +2,11 @@ import logging
 
 from x_weibo.spiders.abs.AbstractWeiBoProcess import AbstractWeiBoProcess
 
+"""
+    与scrapy结合，这里没有做过多的实现，主要是一些递归方面的问题。
+    例如 ： 我爬取了一条微博信息，但是我想知道微博下面有哪些评论，评论的用户有哪些？
+"""
+
 
 class DefaultWeiBoProcess(AbstractWeiBoProcess):
     logging.basicConfig(level=logging.NOTSET,
