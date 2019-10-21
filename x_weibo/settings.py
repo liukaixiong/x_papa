@@ -8,6 +8,7 @@
 #     https://doc.scrapy.org/en/latest/topics/settings.html
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+from x_weibo import weibo_login_user
 
 BOT_NAME = 'x_weibo'
 
@@ -48,7 +49,7 @@ ROBOTSTXT_OBEY = False
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:61.0) Gecko/20100101 Firefox/61.0',
-    'Cookie': '_T_WM=88819513180; ALF=1571883517; SCF=Amp0K_iWqOQXNBAacw3C0u_dVbzxhJVtBjTuuLjNPTIU8hWx_R9rBWZ8hNrMx4RY9OdBmG5hw89iTUXr25S1qB8.; SUB=_2A25wjQ7ZDeThGeNI6VUQ9y3NyzyIHXVQcZKRrDV6PUJbktANLRnjkW1NSJ3XCaB4ggZa0iiZR2KUTAfhHkkbE24g; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WFdc7grDhZy8BfuLoHqaYFI5JpX5K-hUgL.Fo-ceoMpS0epeh52dJLoI0YLxKBLBo.LBK5LxKqL1heLB-qLxK-L1K5LB-eLxKBLB.BLBK5LxKnLB-qLBoBLxKqL122LBo2LxKqLB-BL1h.t; SUHB=0wnlkNF2YzH2q2; SSOLoginState=1569291913; MLOGIN=1'
+    'Cookie': weibo_login_user.default_cookie
 }
 CONCURRENT_REQUESTS = 16
 # 只有这一行代码，其他的是为了方便查找，加上这一行基本上就能解决了
